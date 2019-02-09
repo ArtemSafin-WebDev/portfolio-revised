@@ -1,0 +1,29 @@
+.animated-brackets {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 40;
+}
+
+.animated-brackets__icon {
+  width: 200px;
+  height: 150px;
+  fill: #e6e6e6;
+}
+
+.animated-brackets__icon-bottom {
+  animation-name: blink;
+  animation-duration: .45s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

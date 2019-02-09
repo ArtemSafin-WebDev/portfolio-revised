@@ -1,0 +1,90 @@
+.about-me {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.about-me__text-section {
+  padding-right: 30px;
+  text-align: left;
+  h2 {
+    font-size: 26px;
+    margin: 0;
+    margin-top: 40px;
+  }
+
+  hr {
+    margin-top: 15px;
+    width: 200px;
+   
+    
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+}
+
+.about-me__content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.about-me__tech-section {
+  margin-top: 30px;
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.about-me__tech-list {
+  padding: 0;
+  display: flex;
+  margin-top: 15px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.about-me__tech-list-item {
+  margin-right: 15px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  > svg {
+    width: 50px;
+    height: 50px;
+    display: block;
+  }
+}
+
+.about-me__tech-name {
+  @include visuallyHidden();
+}
+
+.about-me__services-link {
+  color: $primary-color;
+  margin-top: auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #fff;
+  box-shadow: 0px 3px 15px rgba($secondary-color, 0.2);
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+  align-self: flex-start;
+  &:link,
+  &:visited {
+    color: $primary-color;
+  }
+  &:hover,
+  &:focus {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}

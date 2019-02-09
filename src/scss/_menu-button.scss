@@ -1,0 +1,45 @@
+.menu-button {
+  width: 50px;
+  height: 50px;
+  background-color: $primary-color;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 400;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 80px;
+  outline: none;
+}
+
+
+.menu-button__burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-button__burger-bar {
+  width: 85%;
+  height: 3px;
+  background-color: #fff;
+  margin-bottom: 6px;
+  transition: transform .4s;
+  transform-origin: right center;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.menu-open .menu-button__burger-bar {
+  &:nth-child(1) {
+    transform: translate3d(0, 10px, 0) rotate(45deg) scaleX(.5);
+    
+  }
+  &:nth-child(2) {
+
+  }
+  &:nth-child(3) {
+    transform: translate3d(0, -10px, 0) rotate(-45deg) scaleX(.5) ;
+    
+  }
+}
