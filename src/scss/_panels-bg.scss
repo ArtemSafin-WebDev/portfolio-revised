@@ -21,23 +21,26 @@
 
 
 .panels-bg__left-column {
-  width: 58%;
+  width: 65%;
   .panels-bg__panel {
     &:nth-child(1) {
       background-color: $primary-color;
+      background-image: linear-gradient(to right bottom, rgba($secondary-color, .8), rgba($secondary-color, .95)), url('../img/backgrounds/annie-spratt-294450-unsplash.jpg');
+      background-size: cover;
+      background-position: center;
       flex-basis: 50px;
-      flex-grow: 1;
+      flex-grow: 10;
     }
-    &:nth-child(2) {
-      background-color: #ebebeb;
-      flex-basis: 50px;
-      flex-grow: 1;
-    }
+    // &:nth-child(2) {
+    //   background-color: #ebebeb;
+    //   flex-basis: 50px;
+    //   flex-grow: 1;
+    // }
   }
 }
 
 .panels-bg__right-column {
-  width: 42%;
+  width: 35%;
   .panels-bg__panel {
     &:nth-child(1) {
       background-color: #fafafa;
@@ -45,7 +48,7 @@
       flex-grow: 2;
     }
     &:nth-child(2) {
-      background-color: $primary-color;
+      background-color: #d6d6d6;
       flex-basis: 50px;
       flex-grow: 1;
     }

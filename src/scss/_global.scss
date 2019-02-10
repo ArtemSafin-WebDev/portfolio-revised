@@ -21,6 +21,7 @@ body {
   padding: 0;
   line-height: 1.6;
   overflow-x: hidden;
+  
 }
 
 ul {
@@ -49,7 +50,9 @@ img {
 }
 
 main {
-  background-color: #fff;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  background-color: #f2f3f8;
 }
 
 footer {
@@ -67,7 +70,9 @@ hr {
   margin-right: auto;
 }
 
-
+.visually-hidden {
+  @include visuallyHidden();
+}
 
 ::selection {
   color: white;
