@@ -8,6 +8,11 @@
   z-index: 400;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 15px 80px;
   outline: none;
+  flex-shrink: 0;
+  @include breakpoint(mobile) {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 
@@ -19,12 +24,19 @@
 }
 
 .menu-button__burger-bar {
-  width: 85%;
+  width: 30px;
   height: 3px;
   background-color: #fff;
   margin-bottom: 6px;
   transition: transform .4s;
   transform-origin: right center;
+  flex-shrink: 0;
+  backface-visibility: hidden;
+  outline: 1px solid transparent;
+  @include breakpoint(mobile) {
+    width: 35px;
+    height: 4px;
+  }
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -33,13 +45,17 @@
 .menu-open .menu-button__burger-bar {
   &:nth-child(1) {
     transform: translate3d(0, 10px, 0) rotate(45deg) scaleX(.5);
-    
+    @include breakpoint(mobile) {
+      transform: translate3d(0, 11px, 0) rotate(45deg) scaleX(.5);
+    }
   }
   &:nth-child(2) {
 
   }
   &:nth-child(3) {
-    transform: translate3d(0, -10px, 0) rotate(-45deg) scaleX(.5) ;
-    
+    transform: translate3d(0, -10px, 0) rotate(-45deg) scaleX(.5);
+    @include breakpoint(mobile) {
+      transform: translate3d(0, -11px, 0) rotate(-45deg) scaleX(.5);
+    }
   }
 }

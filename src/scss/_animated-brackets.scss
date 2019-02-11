@@ -3,6 +3,9 @@
   top: 0;
   right: 0;
   z-index: 40;
+  @include breakpoint(desktop) {
+    display: none;
+  }
 }
 
 .animated-brackets__icon {

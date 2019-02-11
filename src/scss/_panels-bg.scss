@@ -22,6 +22,12 @@
 
 .panels-bg__left-column {
   width: 65%;
+  @include breakpoint(tablet) {
+    width: 100%;
+  }
+  @include breakpoint(mobile) {
+    display: none;
+  }
   .panels-bg__panel {
     &:nth-child(1) {
       background-color: $primary-color;
@@ -31,16 +37,14 @@
       flex-basis: 50px;
       flex-grow: 10;
     }
-    // &:nth-child(2) {
-    //   background-color: #ebebeb;
-    //   flex-basis: 50px;
-    //   flex-grow: 1;
-    // }
   }
 }
 
 .panels-bg__right-column {
   width: 35%;
+  @include breakpoint(tablet) {
+    display: none;
+  }
   .panels-bg__panel {
     &:nth-child(1) {
       background-color: #fafafa;

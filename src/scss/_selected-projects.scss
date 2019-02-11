@@ -5,17 +5,32 @@
 .selected-projects__intro {
   width: 60%;
   margin-bottom: 20px;
+  @include breakpoint(tablet) {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .selected-projects__intro-heading {
   font-size: 26px;
   margin: 0;
+  @include breakpoint(mobile) {
+    font-size: 24px;
+  }
 }
 
 .selected-projects__intro-paragraph {
   margin: 0;
   margin-top: 15px;
   font-size: 16px;
+  @include breakpoint(tablet) {
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 80%;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
 }
 
 .selected-projects__intro-link {
@@ -43,11 +58,14 @@
 .selected-projects__list {
   padding: 0;
   margin: 0;
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  // grid-gap: 15px;
   column-count: 3;
   column-gap: 15px;
+  @include breakpoint(tablet) {
+    column-count: 2;
+  }
+  @include breakpoint(mobile) {
+    column-count: initial;
+  }
 }
 
 .selected-projects__card {

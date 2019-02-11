@@ -15,6 +15,7 @@
     margin-right: 15px;
     border: 3px solid $primary-color;
     position: relative;
+    flex-shrink: 0;
     @include objectFitCover();
     &::before {
         content: '';

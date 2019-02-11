@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  @include breakpoint(mobile) {
+    flex-grow: 0;
+  }
 }
 
 .about-me__text-section {
@@ -11,10 +14,13 @@
     font-size: 24px;
     margin: 0;
     margin-top: 40px;
+    @include breakpoint(tablet) {
+      margin-top: 20px;
+    }
   }
 
   hr {
-    margin-top: 15px;
+    margin-top: 10px;
     width: 200px;
    
     
@@ -31,10 +37,19 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  @include breakpoint(small-tablet) {
+    width: 70%;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
 }
 
 .about-me__tech-section {
   margin-top: 30px;
+  @include breakpoint(tablet) {
+    margin-top: 15px;
+  }
   h3 {
     font-size: 16px;
     font-weight: 600;
@@ -45,9 +60,9 @@
 .about-me__tech-list {
   padding: 0;
   display: flex;
-  margin-top: 15px;
   margin: 0;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .about-me__tech-list-item {
@@ -78,6 +93,9 @@
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
   align-self: flex-start;
+  @include breakpoint(mobile) {
+    margin-top: 20px;
+  }
   &:link,
   &:visited {
     color: $primary-color;

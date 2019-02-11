@@ -8,6 +8,15 @@
   justify-content: center;
   text-align: center;
   z-index: 1;
+  @include breakpoint(laptop) {
+    min-height: 440px;
+  }
+  @include breakpoint(tablet) {
+    min-height: 380px;
+  }
+  @include breakpoint(mobile) {
+    min-height: 300px;
+  }
   &::before {
     content: '';
     width: 100vw;
@@ -17,6 +26,15 @@
     left: calc(-1 * (100vw - 100%) / 2);
     top: 0;
     z-index: -1;
+    background-image: linear-gradient(to right, rgba($secondary-color, 0.9), rgba($secondary-color, 0.8)),
+      url('../img/backgrounds/fullscreen-desktop@1x.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (min-resolution: $dpi), (min-resolution: $dppx) {
+      background-image: linear-gradient(to right, rgba($secondary-color, 0.9), rgba($secondary-color, 0.8)),
+        url('../img/backgrounds/fullscreen-desktop@2x.jpg');
+    }
   }
 }
 
@@ -25,6 +43,9 @@
   margin: 0;
   font-size: 34px;
   margin-bottom: 20px;
+  @include breakpoint(mobile) {
+    font-size: 26px;
+  }
 }
 
 .fullpage__link {
@@ -38,6 +59,9 @@
   display: inline-block;
   z-index: 1;
   overflow: hidden;
+  @include breakpoint(mobile) {
+    font-size: 16px;
+  }
   &-text {
     position: relative;
     z-index: 3;
@@ -52,7 +76,7 @@
     z-index: 2;
     background-color: white;
     transform: translate3d(0, 100%, 0);
-    transition: transform .3s;
+    transition: transform 0.3s;
   }
   &:link,
   &:visited {

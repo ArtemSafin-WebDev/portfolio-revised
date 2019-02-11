@@ -5,6 +5,9 @@
 
 .main-nav__list {
     display: flex;
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 
